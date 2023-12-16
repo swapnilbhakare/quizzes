@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { Provider } from "react-redux";
 import store from "./store/store";
@@ -16,20 +16,11 @@ function App() {
           <Header />
         </header>
         <Container className="mt-2">
-          <Router>
-            <Routes>
-              <Route
-                path="/"
-                element={
-                  <Container>
-                    <Home />
-                  </Container>
-                }
-              />
-              <Route path="/quiz/:quizName" element={<Quiz />} />
-              <Route path="/leaderboard" element={<Leaderboard />} />
-            </Routes>
-          </Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/quiz/:quizName" element={<Quiz />} />
+            <Route path="/leaderboard" element={<Leaderboard />} />
+          </Routes>
         </Container>
       </div>
     </Provider>

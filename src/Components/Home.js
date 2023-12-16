@@ -25,10 +25,8 @@ const Home = () => {
   return (
     <Container className="mt-4">
       <Form className="d-flex flex-column align-items-center">
-        <Form.Label className="text-neutral-800 font-bold text-sm mb-2">
-          Enter Name:
-        </Form.Label>
-        <Col xs="12" sm="8" md="6" lg="4" xl="3">
+        <h6 className="m-3">Welcome to the Quiz App</h6>
+        <Col className="m-3" xs="12" sm="8" md="6" lg="4" xl="3">
           <Form.Control
             id="cardName"
             type="text"
@@ -40,7 +38,7 @@ const Home = () => {
         </Col>
         <Button
           variant="info"
-          className="mt-2"
+          className="mt-3"
           type="button"
           onClick={handleStartQuiz}
         >
